@@ -171,3 +171,50 @@ firebase.database().ref('messages')
           `;
       });
 
+// Firebase Database
+// Usaremos una colección para guardar los mensajes, llamada messages
+function sendMessage(){
+const currentUser = firebase.auth().currentUser;
+const messageAreaText = messageArea.value;
+const displayNames = registryName.value;
+
+//Para tener una nueva llave en la colección messages
+const newMessageKey = firebase.database().ref().child('messages').push().key;
+
+
+firebase.database().ref(`messages/${newMessageKey}`).set({
+    creator : currentUser.uid,
+    creatorName : currentUser.displayName || currentUser.email,
+    text : messageAreaText
+});
+}             
+
+
+window.onload = () => {
+  openPerfil();
+  openQuienesSomos();
+  openNav();
+  closeNav();
+
+  //aqui va nombre de la funcion
+
+}
+
+
+function openPerfil() {
+  const btnPerfil = document.getElementById('perfil').addEventListener ('click', () => {
+    document.getElementById("containerMuro").style.display="none";
+    document.getElementById("containerQuienesSomos").style.display="none";
+    document.getElementById("containerPerfil").style.display="block";
+    //id container .style.display="none";
+  });
+}
+
+function openQuienesSomos() {
+  const btnPerfil = document.getElementById('quienesSomos').addEventListener ('click', () => {
+    document.getElementById("containerMuro").style.display="none";
+    document.getElementById("containerPerfil").style.display="none";
+    document.getElementById("containerQuienesSomos").style.display="block";
+    //id container .style.display="none";
+  });
+}
