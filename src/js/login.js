@@ -12,14 +12,6 @@ window.onload = () => {
 
 }
 
-/*Barra lateral */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
 
 //ocultar login al apretar boton registrar y mostar registro
 function registry() {

@@ -16,6 +16,7 @@ body {
         margin-top: 3em;
     }
 }
+
 @media(min-width: 601px) and (max-width: 1000px) {
     #logoCelibook {
         width: 25%;
@@ -23,6 +24,7 @@ body {
         margin-top: 3em;
     }
 }
+
 @media(min-width: 1001px) and (max-width: 1500px) {
     #logoCelibook {
         width: 15%;
@@ -277,18 +279,20 @@ body {
     cursor: pointer;
 }
 
-.containerWall{
+.containerWall {
     border: 1px solid #99CE81;
     width: 80%;
     margin-top: 1em;
 }
-#post{
+
+#post {
     margin-top: 1em;
     width: 80%;
     margin-left: 10%;
     border-radius: 4px;
 }
-#buttonPost{
+
+#buttonPost {
     color: white;
     background-color: #9B369D;
     border-radius: 4px;
@@ -297,34 +301,35 @@ body {
     cursor: pointer;
 }
 
-.textPostStyle{
+.textPostStyle {
     border: 1px solid grey;
-    width:80%;
+    width: 80%;
     margin-left: 10%;
     border-radius: 4px;
-    margin-top: 1em;    
+    margin-top: 1em;
 }
 
-.iconHeart{
+.iconHeart {
     color: grey;
     cursor: pointer;
     margin-left: 60%;
     font-family: Tahoma;
 }
-.changeColorHeart{
+
+.changeColorHeart {
     color: red;
 }
-.iconEdit{
-    color: grey;   
-    cursor: pointer;
-    margin-left: 0.5em;
 
-}
-.iconTrash{
+.iconEdit {
     color: grey;
     cursor: pointer;
     margin-left: 0.5em;
-  
+}
+
+.iconTrash {
+    color: grey;
+    cursor: pointer;
+    margin-left: 0.5em;
 }
 
 /*Seccion perfil */
@@ -414,4 +419,54 @@ body {
     margin: 0;
     display: none;
     width: 100%;
+}
+
+/* SECCION DE PREGUNTAS FRECUENTES */
+
+.questionsCol {
+    height: 15em;
+    text-align: center;
+}
+
+#titleQuestions {
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-top: 3em;
+}
+
+.panel-heading {
+    background-color: #9B369D;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+.panel-body {
+    background-color: white;
+    margin: 1em;
+    border: #9B369D 3px solid;
+}
+
+.titleCollapse {
+    color: white;
+    font-size: 0.7em;
+    margin-left: 1em;
+}
+
+#accordion {
+    margin-top: 2.5em;
+}
+
+/*Volver atras */
+
+#atrasPerfil, #atrasQuienessomos, #atrasSalud, #atrasAlimentacion, #atrasActividades, #atrasNoticias, #atrasPreguntasFrecuentes {
+    position: right;
+    color: white;
+    background-color: #9B369D;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 70%;
+    margin-top: 0.5em;
+    cursor: pointer;
 }

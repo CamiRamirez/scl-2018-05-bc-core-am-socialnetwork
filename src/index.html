@@ -158,32 +158,44 @@
     <div class="container-fluid ">
       <div>
         <div id="messageContainer">
-            <h1 id="titleWall">Comunidad en línea</h1>
-            <input id="messageArea" type="text" placeholder="  ¿Qué deseas compartir?">
-            <input type="button" id="sendButton" value="Publicar" onclick="sendMessage()">
-            <div id="contenedor"></div>
+          <h1 id="titleWall">Comunidad en línea</h1>
+          <input id="messageArea" type="text" placeholder="  ¿Qué deseas compartir?">
+          <input type="button" id="sendButton" value="Publicar" onclick="sendMessage()">
+          <div id="contenedor"></div>
         </div>
       </div>
-    </div> 
+    </div>
 
     <!-- Contenedor de publicaciones 2 (con iconos)-->
     <div class="container-fluid containerWall">
-        <h1 id="titleWall">Comunidad en línea</h1>
+      <h1 id="titleWall">Comunidad en línea</h1>
       <div class="row">
         <div class="col-12">
           <textarea class="txt" id="post" placeholder=" ¿Qué deseas compartir?"></textarea>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <button type="submit" id="buttonPost" onclick="sendMessage()">Comentar</button>
+
+
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" id="buttonPost">Comentar</button>
+          </div>
+        </div>
+        <!-- contenedor comentarios -->
+        <div class="row">
+          <div class="col-12" id="cont"></div>
         </div>
       </div>
-      
-      <div class="row">
-        <div class="col-12" id="cont"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" id="buttonPost" onclick="sendMessage()">Comentar</button>
       </div>
-    </div> 
+    </div>
+
+    <div class="row">
+      <div class="col-12" id="cont"></div>
+    </div>
+  </div>
 
 
   </div>
@@ -234,13 +246,9 @@
     </div>
 
     <div class="row">
-      <form>
-
-        <input type="button" value="volver atrás" name="volver atrás2" onclick="history.go(-1)" />
-
-      </form>
-
-
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasPerfil" value="volver atrás" name="volver atrás2" onclick="closePerfil" />
+      </div>
     </div>
   </div>
 
@@ -271,9 +279,7 @@
           datos, recetas, medicamentos u otros y de esta forma contribuir al bienestar de la comunidad que vive con esta
           intolerancia. Es por eso que invitamos a todas las personas que estén interesadas que se unan para compartir todos
           el contenido que encuentren necesario en esta red social 100 % libre de gluten.
-
         </p>
-
       </div>
     </div>
 
@@ -283,8 +289,15 @@
         <img src="../img/celiacosunidos.jpg" alt="fotoCeliacos" id="fotoCeliacos">
       </div>
     </div>
-  </div>
 
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasQuienessomos" value="volver atrás" name="volver atrás2" onclick="closeQuienessomos" />
+      </div>
+    </div>
+
+  </div>
   <!-- seccion salud -->
 
   <div class="container-fluid" id="containerSalud">
@@ -317,6 +330,16 @@
 
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasSalud" value="volver atrás" name="volver atrás2" onclick="closeSalud" />
+      </div>
+    </div>
+
+
+
+
   </div>
 
   <!-- seccion Alimentacion -->
@@ -340,15 +363,217 @@
 
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h2 id="alimentacion">Alimentos</h2>
-        <p>
-          Porque grande quiero ser, como bien.
-
-        </p>
+        <table id="tabla" class="table table-striped">
+          <thead>
+            <tr>
+              <th style="width:160px">Alimento</th>
+              <th style="width:220px">Producto</th>
+              <th style="width:140px">Empresa</th>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <input id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar" />
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nectar</td>
+              <td>Nectar sabor damasco</td>
+              <td class="text-right">Colun</td>
+            </tr>
+            <tr>
+              <td>Nectar</td>
+              <td>Néctar Mimún sabor damasco</td>
+              <td class="text-right">Colun</td>
+            </tr>
+            <tr>
+              <td>Jugo</td>
+              <td>Jugo de Piña-Naranja-Banana (lata 177 ml) </td>
+              <td class="text-right">Dole</td>
+            </tr>
+            <tr>
+              <td>Jugo</td>
+              <td>Jugo Manzana Orgánico</td>
+              <td class="text-right">AMA</td>
+            </tr>
+            <tr>
+              <td>Bebida Energetica</td>
+              <td>Green Energy Drink (bebida energética)</td>
+              <td class="text-right">Go and Fun</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- TABLA FINALIZA -->
 
       </div>
     </div>
 
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 id="alimentacion">Alimentos</h2>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OkPPDqPMKQ-9Dbfy33tKNS11pJ7RrQDI" width="640" height="480"></iframe>
+
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasAlimentacion" value="volver atrás" name="volver atrás2" onclick="closeAlimentacion" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- seccion Preguntas frecuentes -->
+  <div class="container-fluid" id="containerPreguntasFrecuentes">
+    <header class="barTop">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="perfil" href="#" onclick="openPerfil()">Mi Perfil</a>
+        <a id="quienesSomos" href="#" onclick="openQuienesSomos()">Quienes somos</a>
+        <a id="salud" href="#" onclick="openSalud()">Salud Integral</a>
+        <a id="alimentacion" href="#" onclick="openAlimentacion()">Alimentacion</a>
+        <a id="actividades" href="#" onclick="openActividades()">Actividades</a>
+        <a id="noticias" href="#" onclick="openNoticias()">Noticias</a>
+        <a id="preguntasFrecuentes" href="#" onclick="openPreguntasfrecuentes()">Preguntas frecuentes</a>
+        <a href="#">Home</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+      <span class="burger" onclick="openNav()">&#9776;</span>
+    </header>
+
+
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3 questionsCol">
+        <h1 id="titleQuestions">Preguntas Frecuentes</h1>
+
+        <p>Alguna vez te han preguntado ¿cómo sabes qué eres intolerante al gluten o celiaco? o crees que tienes los síntomas
+          de la celiaquia pero no sabes a qué medico recurrir. A continuación te presentamos la diferencias entre Enfermedad
+          Celíaca, Sensibilidad no Celíaca al gluten y Alergia a las proteínas del trigo.</p>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+      <!-- preguntas frecuentes -->
+      <div class="col-md-6 offset-md-3">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="titleCollapse">
+                  ¿Qué es la Enfermedad celiaca?
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <p>Es una enfermedad
+                  <b> crónica autoinmune</b>, caracterizada por la
+                  <b>mala absorción de nutrientes </b> (proteínas, grasas, hidratos de carbono, sales minerales y vitaminas)
+                  como consecuencia del daño inflamatorio de la mucosa del intestino delgado, que se gatilla al ingerir el
+                  gluten de los alimentos, en individuos genéticamente predispuestos. En el caso de la enfermedad celíaca,
+                  la autoinmunidad se produce por anticuerpos del tipo inmunoglobulina A e inmunoglobulina G (IgA, IgG) Se
+                  presenta en el 1% de la población mundial y puede presentarse en cualquier etapa de la vida, desde que
+                  se inicia la exposición al gluten. El único tratamiento es una Dieta Libre de Gluten, de forma estricta
+                  y para toda la vida. El celíaco soporta el consumo de pequeñas trazas de gluten medidas en partes por millón
+                  (miligramos por kilogramo de producto). Por esto debe poner especial cuidado con el llamado “Gluten Oculto”
+                  en los alimentos procesados, y la “Contaminación Cruzada”, ya sea industrial o doméstica. Cada país normalmente
+                  maneja un listado de alimentos y medicamentos seguros para el consumo de las personas celíacas. En las
+                  enfermedades autoinmunes, el cuerpo genera anticuerpos atacando sus propios órganos. Así, en el caso de
+                  la diabetes tipo 1 el cuerpo ataca al páncreas, en la tiroiditis a la tiroides y en la enfermedad celíaca
+                  al intestino delgado. Los celíacos sin diagnóstico y/o que no realizan el tratamiento con la dieta libre
+                  de gluten tienen mayor riesgo de presentar otras enfermedades autoinmunes asociadas.</p>
+
+                <p>
+                  <strong>Sintomas para la celiaquía</strong>
+                </p>
+                <p>Es una nueva enfermedad de la que aún se sabe muy poco. Sus síntomas son parecidos a los de la enfermedad
+                  celíaca y comparte algunos con la alergia al trigo. Se trata de personas que presentan síntomas ante la
+                  ingestión de gluten, en los cuales los exámenes para documentar la enfermedad celíaca son negativos. En
+                  su aparición, no intervienen mecanismos inmunológicos como en el caso de EC o alergia al trigo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="titleCollapse">
+                  ¿Qué es la Sensibilidad no celíaca al gluten SNGC?
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>Es una nueva enfermedad de la que aún se sabe muy poco. Sus síntomas son parecidos a los de la enfermedad
+                  celíaca y comparte algunos con la alergia al trigo. Se trata de personas que presentan síntomas ante la
+                  ingestión de gluten, en los cuales los exámenes para documentar la enfermedad celíaca son negativos. En
+                  su aparición, no intervienen mecanismos inmunológicos como en el caso de EC o alergia al trigo.</p>
+
+                <strong>Sintomas para la Sensibilidad no celiaca</strong>
+                <p>Es una nueva enfermedad de la que aún se sabe muy poco. Sus síntomas son parecidos a los de la enfermedad
+                  celíaca y comparte algunos con la alergia al trigo. Se trata de personas que presentan síntomas ante la
+                  ingestión de gluten, en los cuales los exámenes para documentar la enfermedad celíaca son negativos. En
+                  su aparición, no intervienen mecanismos inmunológicos como en el caso de EC o alergia al trigo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="titleCollapse">
+                  ¿A qué doctor debo recurrir en caso de presentar síntomas?
+                  <i class="fas fa-caret-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>
+                  <p> Existen doctores especialistas en celiaquía.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="titleCollapse">
+                ¿Qué examenes me tendrian que hacer para ver si soy celiaco/sensible al gluten?
+                <i class="fas fa-caret-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p> Los pasos a seguir según el examen medico, dependen de cada doctor pero existen algunos que son recomendados
+                por los especialistas para ver tu estado de salud </p>
+              <p> Antiendomisio y antitransglutaminasa son los exámenes para investigar la celiaquía, si salen alterados se realiza
+                endoscopía y biopsia al intestino.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasPreguntasFrecuentes" value="volver atrás" name="volver atrás2" onclick="closePreguntasFrecuentes"
+        />
+      </div>
+    </div>
 
   </div>
 
@@ -380,6 +605,13 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasActividades" value="volver atrás" name="volver atrás2" onclick="closeActividades" />
+      </div>
+    </div>
+
+
   </div>
 
   <!-- seccion noticias -->
@@ -404,9 +636,63 @@
       <div class="col-md-6 offset-md-3">
         <h2 id="noticias">Noticias</h2>
         <p>
-          InformATE AL INSTANTE
+         Lee la actualidad internacional y nacional respecto a temas como la celiaquía, intolerancia al gluten, experiencia de usuarios y mucho más. 
         </p>
 
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3">
+
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Si no soy celiaco, ¿por qué me sienta mal el gluten?</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Silvia F.G. tiene una relación extraña con el gluten: cada vez que toma alimentos con esta proteína, siente molestias
+              intestinales e incluso cansancio, pero el médico ha descartado que sea celiaca, ya que todas las pruebas médicas
+              han resultado negativas. Esta contradicción la convierte en candidata a padecer "sensibilidad al gluten no
+              celiaca", una afección recogida en la última Clasificación Internacional de Enfermedades sobre la que aún planean
+              algunas sombras.</p>
+            <small>Revisa la noticia completa
+              <a href="https://elpais.com/elpais/2018/06/28/buenavida/1530180812_683293.html"> aquí </a>
+            </small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Día Internacional del Celíaco: nutricionista explica la clave para controlar la enfermedad</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Cada año, se conmemora el 5 de mayo como el Día Internacional del Celíaco, enfermedad autoinmune y cuya prevalencia
+              en Chile no se sabe con exactitud, aunque se estima que el 1% de los chilenos la padece. Sin embargo, expertos
+              advierten que 9 de cada 10 celíacos desconocerían tener la enfermedad.</p>
+            <small>Revisa la noticia completa
+              <a href="http://www.elmostrador.cl/agenda-pais/vida-en-linea/vida-destacados/2018/05/05/dia-internacional-del-celiaco-nutricionista-explica-la-clave-para-controlar-la-enfermedad/">
+                aquí </a>
+            </small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">[VIDEO] Mercado para celíacos va en constante crecimiento en Chile</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Según estudios, el 1% de la población mundial es celíaca. En Chile cada vez se detectan más casos, por eso la
+              necesidad de más opciones alimenticias que estén libre de gluten.</p>
+            <small>Revisa la noticia completa
+              <a href="http://www.t13.cl/videos/nacional/video-mercado-celiacos-va-constante-crecimiento-chile"> aquí </a>
+            </small>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <input type="button" id="atrasNoticias" value="volver atrás"  name="volver atrás2" onclick="closeNoticias" />
       </div>
     </div>
 
@@ -444,6 +730,9 @@
 
   </div>
 
+  <!-- seccion Preguntas frecuentes -->
+
+
   <!--Link firebase-->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
@@ -467,10 +756,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/7cdd7a07f8.js"></script>
+
+
+
   <script src="js/login.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/muro.js"></script>
   <script src="js/chat.js"></script>
+  <script src="js/mapsfirebase.js"></script>
 
 </body>
 
